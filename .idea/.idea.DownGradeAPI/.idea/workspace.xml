@@ -9,21 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6952b2e4-4509-45db-9a4a-63a42000e89b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/Controllers/DispatchController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/DownGradeAPI.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/Models/Contributor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/Models/Dispatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/Models/DowngradeDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DownGradeAPI/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DownGradeAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DownGradeAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/actions/Dispatches.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,13 +92,23 @@
       <option name="presentableId" value="Default" />
       <updated>1606249010078</updated>
       <workItem from="1606249019666" duration="7155000" />
+      <workItem from="1606332471869" duration="74000" />
+      <workItem from="1606602853163" duration="383000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1606332508385</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606332508385</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -123,9 +120,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1878" height="303" key="GridCell.Tab.0.bottom" timestamp="1606332429681">
@@ -196,5 +196,9 @@
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="-1360" y="110" key="Rider.ProjectTemplateDialog.Size/0.23.1440.877/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1606249402600" />
+    <state x="-1360" y="98" key="Vcs.Push.Dialog.v2" timestamp="1606332534492">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="-1360" y="98" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1606332534492" />
   </component>
 </project>

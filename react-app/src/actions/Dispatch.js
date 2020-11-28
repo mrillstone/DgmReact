@@ -8,6 +8,7 @@ export const ACTION_TYPES = {
 }
 
 export const fetchAll = () => dispatch => {
+    // get dispactches req.
     dispatch({
         type: ACTION_TYPES.FETCH_ALL,
         payload: []
