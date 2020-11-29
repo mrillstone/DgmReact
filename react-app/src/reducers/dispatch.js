@@ -1,4 +1,4 @@
-import { ACTION_TYPES } from "../actions/Dispatch"; 
+import { ACTION_TYPES } from "../actions/dispatch"; 
 const initialState = {
     list:[]
 }
