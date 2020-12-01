@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/dispatch";
-import { Grid , Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, withStyles} from "@material-ui/core";
+import { Grid , Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, withStyles, ButtonGroup, Button} from "@material-ui/core";
 import DispatchForm from "./DispatchForm";
+import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete";
+import { useToasts } from "react-toast-notifications";
 
 
 const styles = theme => ({
@@ -18,19 +21,23 @@ const styles = theme => ({
 })
 
 const Dispatches = ({ classes, ...props }) => {
-    // const [x, setx] = useState(0)
-    // setx(5)
+    const [currentId, setCurrentId] = useState(0)
 
     useEffect(() => {
         props.fetchAllDispatches()
     }, [])
 
+    //toast msg.
+    const { addToast } = useToasts()
+
+    const onDelete = id => {
+        if (window.confirm('Are you sure to delete this record?'))
+            props.deleteDispatch(id,()=>addToast("Deleted successfully", { appearance: 'info' }))
+    }
+
     return (
         <Paper className={classes.paper} elevation={3}>
             <Grid container>
-                <Grid item xs={12}>
-                    <DispatchForm />
-                </Grid>
                 <Grid item xs={12}>
                     <TableContainer>
                         <Table>
@@ -41,6 +48,7 @@ const Dispatches = ({ classes, ...props }) => {
                                     <TableCell>Photograper</TableCell>
                                     <TableCell>Location</TableCell>
                                     <TableCell>Description</TableCell>
+                                    <TableCell></TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
@@ -52,6 +60,14 @@ const Dispatches = ({ classes, ...props }) => {
                                             <TableCell>{record.photographer}</TableCell>
                                             <TableCell>{record.location}</TableCell>
                                             <TableCell>{record.description}</TableCell>
+                                            <TableCell>
+                                                <ButtonGroup variant="text">
+                                                    <Button><EditIcon color="primary"
+                                                        onClick={() => { setCurrentId(record.id) }} /></Button>
+                                                    <Button><DeleteIcon color="secondary"
+                                                        onClick={() => onDelete(record.id)} /></Button>
+                                                </ButtonGroup>
+                                            </TableCell>
                                         </TableRow>)
                                     })
                                 }
@@ -65,11 +81,12 @@ const Dispatches = ({ classes, ...props }) => {
 }
 
 const mapStateToProps = state => ({
-    dispatchList:state.dispatch.list
+    dispatchList: state.dispatch.list
 })
 
 const mapActionToProps = {
-    fetchAllDispatches : actions.fetchAll
+    fetchAllDispatches: actions.fetchAll,
+    deleteDispatch: actions.Delete
 }
 
 export default connect(mapStateToProps, mapActionToProps)(withStyles(styles)(Dispatches));

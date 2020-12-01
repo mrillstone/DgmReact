@@ -1,38 +1,64 @@
 .App {
   text-align: center;
+  font-family: interstate, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Basics ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+a {
+  color: #707070 !important;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Nav ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 10vh;
+  margin: 30px auto;
 }
 
-.App-link {
-  color: #61dafb;
+nav h1 {
+  font-family: interstate, sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: .2em auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Home Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.home ul {
+  list-style-type: none !important;
+}
+
+.home p {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
+  color: #707070 !important;
+  letter-spacing: 4.5px;
+}
+
+.mainLinks {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  color: #707070 !important;
+  line-height: 1.9;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.subLinks {
+  padding: 0;
+  line-height: 3;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
+  color: #707070 !important;
 }
