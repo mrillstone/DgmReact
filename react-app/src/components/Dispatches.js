@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/dispatch";
 import { Grid , Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, withStyles, ButtonGroup, Button} from "@material-ui/core";
-import DispatchForm from "./DispatchForm";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { useToasts } from "react-toast-notifications";
+import DispatchForm from "./DispatchForm";
 
 
 const styles = theme => ({
@@ -38,6 +38,7 @@ const Dispatches = ({ classes, ...props }) => {
     return (
         <Paper className={classes.paper} elevation={3}>
             <Grid container>
+                {/* <DispatchForm {...({ currentId, setCurrentId })} /> */}
                 <Grid item xs={12}>
                     <TableContainer>
                         <Table>

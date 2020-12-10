@@ -1,17 +1,36 @@
-import { Paper } from '@material-ui/core';
-import React from 'react';
+import { Paper, Grid } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
+import DispatchForm from "./DispatchForm";
+import * as actions from "../actions/dispatch";
+import { connect } from "react-redux";
 
-function Admin() {
+
+const Admin = ({ classes, ...props }) => {
+    const [currentId, setCurrentId] = useState(0)
+
+    useEffect(() => {
+        props.fetchAllDispatches()
+    }, [])
+
     return (
         <Paper elevation={3}>
             <Grid container>
                 <Grid item xs={12}>
-                    <DispatchForm {...({ currentId, setCurrentId })} />
+                   <DispatchForm {...({ currentId, setCurrentId })} /> 
                 </Grid>
             </Grid>
         </Paper>
     );
 }
 
-export default Admin;
+const mapStateToProps = state => ({
+    dispatchList: state.dispatch.list
+})
+
+const mapActionToProps = {
+    fetchAllDispatches: actions.fetchAll,
+    deleteDispatch: actions.Delete
+}
+
+export default connect(mapStateToProps, mapActionToProps)(Admin);

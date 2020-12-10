@@ -27,6 +27,10 @@ const initialFieldValues = {
     photographer: '',
     location: '',
     description: '',
+    imageName: '',
+    imageSrc: '',
+    imageFile:null
+
 }
 
 const DispatchForm = ({ classes, ...props }) => {
@@ -96,7 +100,7 @@ const DispatchForm = ({ classes, ...props }) => {
     return (
         <form autoComplete="off" noValidate className={classes.root} onSubmit={handleSubmit}>
             <Grid container>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                     <TextField
                         name="title"
                         variant="outlined"
@@ -105,6 +109,8 @@ const DispatchForm = ({ classes, ...props }) => {
                         onChange={handleInputChange}
                         {...(errors.title && { error: true, helperText: errors.title })}
                     />
+                </Grid>
+                <Grid item xs={12}>
                     <TextField
                         name="author"
                         variant="outlined"
@@ -137,8 +143,7 @@ const DispatchForm = ({ classes, ...props }) => {
                         {errors.bloodGroup && <FormHelperText>{errors.bloodGroup}</FormHelperText>}
                     </FormControl> */}
                 </Grid>
-                <Grid item xs={6}>
-
+                <Grid item xs={12}>
                     <TextField
                         name="photographer"
                         variant="outlined"
@@ -147,6 +152,8 @@ const DispatchForm = ({ classes, ...props }) => {
                         onChange={handleInputChange}
                         {...(errors.photographer && { error: true, helperText: errors.photographer })}
                     />
+                </Grid>
+                <Grid item xs={12}>
                     <TextField
                         name="location"
                         variant="outlined"
@@ -154,6 +161,8 @@ const DispatchForm = ({ classes, ...props }) => {
                         value={values.location}
                         onChange={handleInputChange}
                     />
+                </Grid>
+                <Grid item xs={12}>
                     <TextField
                         name="description"
                         variant="outlined"
@@ -161,6 +170,8 @@ const DispatchForm = ({ classes, ...props }) => {
                         value={values.description}
                         onChange={handleInputChange}
                     />
+                </Grid>
+                <Grid item xs={12}>
                     <div>
                         <Button
                             variant="contained"

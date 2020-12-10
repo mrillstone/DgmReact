@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
+    alignItems: 'center'
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
@@ -30,12 +31,20 @@ const useStyles = makeStyles((theme) => ({
   },
   details: {
     alignItems: 'center',
+    borderBottom: '.5px solid #707070',
+    borderTop: '.5px solid #707070',
+  },
+  border: {
+    borderBottom: '.5px solid #707070',
+    borderTop: '.5px solid #707070',
   },
   column: {
-    flexBasis: '33.33%',
+    // flexBasis: '33.33%',
+    textAlign: 'center',
+    margin: 'auto',
   },
   helper: {
-    borderLeft: `2px solid ${theme.palette.divider}`,
+    // borderLeft: `2px solid ${theme.palette.divider}`,
     padding: theme.spacing(1, 2),
   },
   link: {
@@ -44,6 +53,22 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       textDecoration: 'underline',
     },
+  },
+  txt: {
+    fontWeight: 400,
+    fontSize: '10px',
+    color: "#707070",
+  },
+  txtH: {
+    fontWeight: 700,
+    fontSize: '15px',
+    color: "#707070",
+    textTransform: 'Uppercase'
+  },
+  txtHH: {
+    fontWeight: 700,
+    fontSize: '10px',
+    color: "#707070",
   },
 }));
 
@@ -54,36 +79,41 @@ export default function DispatchMenu() {
     <div className={classes.root}>
       <Accordion defaultExpanded>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1c-content"
           id="panel1c-header"
         >
           <div className={classes.column}>
-            <Typography className={classes.heading}>Location</Typography>
+            <Typography className={classes.txtHH}>2019</Typography>
           </div>
         </AccordionSummary>
         <AccordionDetails className={classes.details}>
-          <div className={classes.column} />
           <div className={classes.column}>
-            <Chip label="Barbados" onDelete={() => {}} />
+            <Typography className={classes.txt}>08/26</Typography>
           </div>
           <div className={clsx(classes.column, classes.helper)}>
-            <Typography variant="caption">
-              Select your destination of choice
-              <br />
+            <Typography variant="caption" className={classes.txtH}>
               <a href="#secondary-heading-and-columns" className={classes.link}>
-                Learn more
+              Devil's Peak
+              <br />
+              Downhill
               </a>
             </Typography>
           </div>
+          <div className={classes.column}>
+            <Typography className={classes.txt}>
+              CO
+               <br />
+              USA
+            </Typography>
+          </div>
         </AccordionDetails>
-        <Divider />
+        {/* <Divider />
         <AccordionActions>
           <Button size="small">Cancel</Button>
           <Button size="small" color="primary">
             Save
           </Button>
-        </AccordionActions>
+        </AccordionActions> */}
       </Accordion>
     </div>
   );
