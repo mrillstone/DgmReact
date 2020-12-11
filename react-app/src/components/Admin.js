@@ -11,7 +11,7 @@ const Admin = ({ classes, ...props }) => {
 
     useEffect(() => {
         props.fetchAllDispatches()
-    }, [])
+    }, [props.fetchAllDispatches])
 
     return (
         <Paper elevation={3}>
