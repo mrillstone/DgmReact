@@ -9,9 +9,11 @@ import { connect } from "react-redux";
 const Admin = ({ classes, ...props }) => {
     const [currentId, setCurrentId] = useState(0)
 
+    const { fetchAllDispatches } = props;
+
     useEffect(() => {
-        props.fetchAllDispatches()
-    }, [props.fetchAllDispatches])
+        fetchAllDispatches();
+    }, [fetchAllDispatches]);
 
     return (
         <Paper elevation={3}>
