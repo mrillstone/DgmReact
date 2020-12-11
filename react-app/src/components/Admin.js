@@ -2,7 +2,7 @@ import { Paper, Grid } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import DispatchForm from "./DispatchForm";
-import * as actions from "./actions/dispatch";
+import * as actions from "../actions/dispatch";
 import { connect } from "react-redux";
 
 

@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
 import Admin from './components/Admin';
-import Dispatches from './components/Dispatches';
+// import Dispatches from './components/Dispatches';
 import DispatchMenu from './components/DispatchMenu';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { store } from "./actions/store";
